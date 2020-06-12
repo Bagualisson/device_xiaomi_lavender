@@ -8,7 +8,7 @@
 $(call inherit-product, vendor/xiaomi/lavender/lavender-vendor.mk)
 
 # Setup dalvik vm configs
-$(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
+$(call inherit-product, vendor/extras/configs/phone-xhdpi-4096-dalvik-heap.mk)
 
 # GoogleCamera
 $(call inherit-product-if-exists, packages/apps/GoogleCamera/gcam.mk)
@@ -132,11 +132,7 @@ PRODUCT_COPY_FILES += \
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
-    com.dsi.ant.antradio_library
-
-PRODUCT_COPY_FILES += \
-    external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.dsi.ant.antradio_library.xml
-
+    antradio_app
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -271,10 +267,17 @@ PRODUCT_PACKAGES += \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0_system
 
-# IMS
+# IMS e Telephony
 PRODUCT_PACKAGES += \
-   ims-ext-common \
-   ims_ext_common.xml
+    ims-ext-common \
+    ims_ext_common.xml \
+    qti-telephony-hidl-wrapper \
+    qti_telephony_hidl_wrapper.xml \
+    qti-telephony-utils \ telephony-ext \
+    qti_telephony_utils.xml
+
+PRODUCT_BOOT_JARS += \
+    telephony-ext
 
 # Radio
 PRODUCT_PACKAGES += \
@@ -442,13 +445,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     android.hardware.sensors@1.0-service
-
-# Telephony
-PRODUCT_PACKAGES += \
-    telephony-ext
-
-PRODUCT_BOOT_JARS += \
-    telephony-ext
 
 # TextClassifier
 PRODUCT_PACKAGES += \
