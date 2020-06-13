@@ -16,8 +16,8 @@
 /sys/devices/soc/soc:fpc1020(/.*)?              u:object_r:fingerprint_sysfs:s0
 
 # Firmware
-/firmware                                                     u:object_r:firmware_file:s0
-/bt_firmware                                                  u:object_r:bt_firmware_file:s0
+/firmware                                       u:object_r:firmware_file:s0
+/bt_firmware                                    u:object_r:bt_firmware_file:s0
 
 # Amplifier
 /(vendor|system/vendor)/bin/tinymix                           u:object_r:vendor_tinyalsa_exec:s0
@@ -66,3 +66,6 @@
 
 # Service HALs
 /(vendor|system/vendor)/bin/hw/android\.hardware\.authsecret@1\.0-service u:object_r:hal_authsecret_default_exec:s0
+
+/dsp(/.*)?               u:object_r:adsprpcd_file:s0
+/persist(/.*)?           u:object_r:persist_file:s0
