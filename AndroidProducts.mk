@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cesium_lavender.mk
+    $(LOCAL_DIR)/revengeos_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    cesium_lavender-user \
-    cesium_lavender-userdebug \
-    cesium_lavender-eng
+    revengeos_lavender-user \
+    revengeos_lavender-userdebug \
+    revengeos_lavender-eng
