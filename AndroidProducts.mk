@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cesium_lavender.mk
+    $(LOCAL_DIR)/pixys_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    cesium_lavender-user \
-    cesium_lavender-userdebug \
-    cesium_lavender-eng
+    pixys_lavender-user \
+    pixys_lavender-userdebug \
+    pixys_lavender-eng
