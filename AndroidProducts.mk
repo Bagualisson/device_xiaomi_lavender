@@ -1,7 +1,7 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cesium_lavender.mk
+    $(LOCAL_DIR)/corvus_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    cesium_lavender-user \
-    cesium_lavender-userdebug \
-    cesium_lavender-eng
+    corvus_lavender-user \
+    corvus_lavender-userdebug \
+    corvus_lavender-eng
