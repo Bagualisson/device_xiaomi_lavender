@@ -25,6 +25,9 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Inherit from lavender device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
+# Inherit G-Apps
+$(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
+
 PRODUCT_BRAND := Xiaomi
 PRODUCT_DEVICE := lavender
 PRODUCT_MANUFACTURER := Xiaomi
