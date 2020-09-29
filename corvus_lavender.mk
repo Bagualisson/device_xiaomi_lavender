@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_p.mk)
 $(call inherit-product, device/xiaomi/lavender/device.mk)
 
 # Inherit some common AOSP stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # Inherit G-Apps
 $(call inherit-product-if-exists, vendor/gapps/common/common-vendor.mk)
@@ -39,7 +39,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="lavender-user 10 QKQ1.190910.002 V11.0.1.0.QFGMIXM release-keys" 
 
 # Device identifier
-PRODUCT_NAME := revengeos_lavender
+PRODUCT_NAME := corvus_lavender
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_PLATFORM := SDM660
 PRODUCT_DEVICE := lavender
