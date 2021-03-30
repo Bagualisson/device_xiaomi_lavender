@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/pixys_lavender.mk
+    $(LOCAL_DIR)/havoc_lavender.mk
 
 COMMON_LUNCH_CHOICES := \
-    pixys_lavender-user \
-    pixys_lavender-userdebug \
-    pixys_lavender-eng
+    havoc_lavender-user \
+    havoc_lavender-userdebug \
+    havoc_lavender-eng
